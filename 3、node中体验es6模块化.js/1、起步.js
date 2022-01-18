@@ -9,18 +9,24 @@
 // 1、安装相关的依赖包：npm i --save-dev @babel/core @babel/cli @babel/preset-env @babel/node
 // 2、安装一个第三方插件：npm i --save @babel/polyfill
 // 3、在项目根目录创建babel的配置文件： babel.config.js
-const presets = [
-  ["@babel/env"],{   // @babel/env其实就是@babel/preset-env这个插件
-    targets: {   // 目标：转换完毕的代码至少支持这些版本的浏览器
-      edg: "17",
-      firefox: "60",
-      chrome: "67",
-      safari: "11.1"
-    }
-  }
-];
-modules.exports = {   // 把配置信息暴露出去供babel使用
-  presets
-}
+// const presets = [
+//   [
+//     "@babel/env",
+//     {
+//       // @babel/env其实就是@babel/preset-env这个插件
+//       targets: {
+//         // 目标：转换完毕的代码至少支持这些版本的浏览器
+//         edge: "17",
+//         firefox: "60",
+//         chrome: "67",
+//         safari: "11.1",
+//       },
+//     },
+//   ],
+// ];
+// module.exports = {
+//   // 把配置信息暴露出去供babel使用
+//   presets,
+// };
 // 4、启用脚手架执行代码：  npx babel-node index.js  会根据我们指定的相关信息，进行一个代码转换
 
