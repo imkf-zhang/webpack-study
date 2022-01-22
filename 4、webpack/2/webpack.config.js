@@ -12,8 +12,8 @@ module.exports = {
     path: path.join(__dirname,'./dist'),
     filename: 'bundle.js' //输出文件名称
   },
-  plugins: [htmlPlugin],
-  // devServer: {
-  //   static: "./src"
-  // }
+  // plugins: [htmlPlugin],
+  devServer: {
+    static: "./"
+  }
 }
