@@ -1,4 +1,9 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const htmlPlugin = new HtmlWebpackPlugin({
+  template: './src/index.html',
+  filename: 'index.html'
+})
 module.exports = {
   // 编译模式，mode用来指定构建模式
   mode: 'development', // development production 
@@ -7,7 +12,8 @@ module.exports = {
     path: path.join(__dirname,'./dist'),
     filename: 'bundle.js' //输出文件名称
   },
-  devServer: {
-    static: "./src"
-  }
+  plugins: [htmlPlugin],
+  // devServer: {
+  //   static: "./src"
+  // }
 }
