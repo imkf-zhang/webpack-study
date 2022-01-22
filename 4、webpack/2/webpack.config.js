@@ -6,5 +6,8 @@ module.exports = {
   output: {  //出口，输出
     path: path.join(__dirname,'./dist'),
     filename: 'bundle.js' //输出文件名称
+  },
+  devServer: {
+    static: "./src"
   }
 }
