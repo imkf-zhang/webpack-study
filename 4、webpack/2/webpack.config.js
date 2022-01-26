@@ -15,7 +15,20 @@ module.exports = {
   },
   plugins: [htmlPlugin],
   module: {
-    rules: [{ test: /.\css$/, use: ["style-loader", "css-loader"] }],
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          { loader: 'style-loader' },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true
+            }
+          }
+        ]
+      }
+    ],
   },
   devServer: {
     static: "./",

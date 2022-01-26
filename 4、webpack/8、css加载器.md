@@ -13,10 +13,21 @@
 2. 在webpack.config.js的module -> rules数组中，添加loader规则如下（加载器对应的是规则）
 ```
 // 所有第三方文件模块的匹配规则
-module: {
-  rules: [
-    {test: /\.css$/, use: ['style-loader', 'css-loader']}
-  ]
-}
-// 其中test表示匹配的文件类型(此处表示以css结尾的文件类型)，use表示对应要调用的loader
+ rules: [
+      {
+        test: /\.css$/,
+        use: [
+          { loader: 'style-loader' },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true
+            }
+          }
+        ]
+      }
+    ],
+//其中test表示匹配的文件类型(此处表示以css结尾的文件类型)，use表示对应要调用的loader
+
+// 一切以官方标准为准，看官方的加载器使用方式
 ```
