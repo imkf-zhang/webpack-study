@@ -56,6 +56,12 @@ module.exports = {
         {
           loader: "sass-loader", // compiles Less to CSS
         },]
+      },
+      {
+        test: /\.jpg|png|tiff$/,
+        use:[{
+          loader:'url-loader?limit=100000'
+        }]
       }
     ],
   },

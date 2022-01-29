@@ -1,13 +1,8 @@
-body,
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background-color: aquamarine;
-}
-
-::placeholder {
-  color: red;
+div {
+  width: 100px;
+  height: 100px;
+  background-color: #1bc72a;
+  background-image: url(../../../imgs/001WQOVOly1gxxeflak39j60u00u0acc02.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
