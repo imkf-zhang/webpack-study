@@ -17,9 +17,9 @@
       {
         test: /\.css$/,
         use: [
-          { loader: 'style-loader' },
+          { loader: 'style-loader' }, // creates style nodes from JS strings
           {
-            loader: 'css-loader',
+            loader: 'css-loader',  //translates CSS into CommonJS
             options: {
               modules: true
             }
@@ -27,7 +27,8 @@
         ]
       }
     ],
-//其中test表示匹配的文件类型(此处表示以css结尾的文件类型)，use表示对应要调用的loader
+//其中test表示匹配的文件类型(此处表示以css结尾的文件类型)，
+//use表示对应要调用的loader  loader顺序是固定的。多个loader的调用方式是从后往前调用
 
-// 一切以官方标准为准，看官方的加载器使用方式
+// 一切以官方网站标准为准，看官方的加载器使用方式，在其它网站看到的难免会有落后的嫌疑（也就是版本号不一样，相关的用法其实是已经发生了改变的）
 ```

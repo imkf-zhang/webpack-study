@@ -9,6 +9,7 @@ eg:
 1、less-loader可以打包处理 .less相关的文件
 2、sass-loader可以打包处理 .scss相关的文件
 3、url-loader 可以打包处理css中与url路径相关的文件
+4、css-loader可以打包处理.css文件
 
 laoder的调用过程
 ![图片](./imgs/loader调用过程.png)
