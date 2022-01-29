@@ -10,7 +10,9 @@
 处理过程，引入css加载器过程：
 1. 运行 **npm i style-loader css-loader -D** 命令，安装处理css文件的loader
 
-2. 在webpack.config.js的module -> rules数组中，添加loader规则如下（加载器对应的是规则）
+2. 在webpack.config.js的module -> rules数组中，添加loader规则如下（加载器对应的是规则，下方代码中是最新的写法）
+之前的webpack版本中（旧的写法：）  rules: [{test: /\.css$/,use: ['style-loader','css-loader']}]
+
 ```
 // 所有第三方文件模块的匹配规则
  rules: [
